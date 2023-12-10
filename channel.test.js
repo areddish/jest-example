@@ -16,5 +16,6 @@ jest.mock("./discord", () => {
 import * as channel from "./channel";
 
 test("test 1", () => {
+    mockFirst.mockReturnValue({guildId: 1})
     expect(channel.emptyQueue()).toBe(1); 
 })
