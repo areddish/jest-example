@@ -2,6 +2,8 @@ import {jest} from "@jest/globals";
 
 const mockFirst = jest.fn();
 
+// This needs to be before the import of channel below so it is
+// mocked when the queue is created.
 jest.mock("./discord", () => {
     return({
      ...jest.requireActual(),
